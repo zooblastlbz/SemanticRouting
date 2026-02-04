@@ -2,9 +2,7 @@
 <!-- <img src="image/logo.png" width="38" height="38" alt="">  -->
 <div align="center">
 
-# SemanticRouting
-
-### Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers
+# SemanticRouting: Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers
 
 [![arXiv](https://img.shields.io/badge/arXiv-2602.03510-b31b1b.svg)](https://arxiv.org/abs/2602.03510)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/license/apache-2-0)
