@@ -1,0 +1,1 @@
+accelerate launch evaluation/sample_genaibench.py evaluation/genaibench.yaml

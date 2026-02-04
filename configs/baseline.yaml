@@ -1,0 +1,77 @@
+trainer:
+  cache_dir: "../.cache/torch_xla"
+  checkpoint_dir: "/path/to/output/256-baseline"
+  checkpointing_steps: 5000
+  consolidation_steps: 50000
+  enable_gradient_checkpointing: false
+  gradient_accumulation_steps: 1
+  gradient_clipping: 1.0
+  hard_skip_resume: false
+  logging_steps: 1
+  logit_mean: 0.0
+  logit_std: 1.0
+  max_steps: 500_000
+  mixed_precision: "bf16"
+  mode_scale: 1.29
+  precondition_outputs: false
+  project: "AdaFuseDiT"
+  resume_from: "latest"
+  run: "256-baseline-4b"
+  seed: 42
+  train_dit: true
+  train_llm: false
+  weighting_scheme: "logit_normal"
+
+model:
+  attention: "cross"
+  base: "/path/to/Qwen3-VL-4B-Instruct/"
+  dit_num_hidden_layers: 24
+  encoder_type: "llm"
+  name: "DiT"
+  patch_size: 2
+  pos_embed: "2d-rope"
+  qk_norm: true
+  sandwich_norm: false
+  timestep_conditioning: null
+  dit_hidden_size: 2048
+  text_hidden_size: 2560
+  text_hidden_states_index: -2
+
+ema:
+  decay: 0.99
+  update_steps: 100
+
+vae:
+  pretrained_model_name_or_path: "/path/to/vae"
+  subfolder: "vae"
+
+noise_scheduler:
+  pretrained_model_name_or_path: "/path/to/scheduler"
+  subfolder: "scheduler"
+
+optimizer:
+  lr: 1e-4
+  weight_decay: 1e-4
+
+lr_scheduler:
+  name: "constant"
+  num_warmup_steps: 0
+
+data:
+  apply_chat_template: false
+  batch_size: 8
+  center_crop: true
+  dataloader_num_workers: 8
+  data_path: "/path/to/train_data.json"
+  use_local_json: true
+  add_generation_prompt: true
+  instruction: "Describe this image."
+  max_prompt_length: 512
+  original_caption_rate: 0.0
+  random_dropping_rate: 0.1
+  resolution: 256
+  tokenizer: "/path/to/Qwen3-VL-4B-Instruct/"
+  
+  # Data loading optimizations
+  persistent_workers: true
+  prefetch_factor: 4

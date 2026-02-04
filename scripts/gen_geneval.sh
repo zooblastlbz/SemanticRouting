@@ -1,0 +1,1 @@
+accelerate launch evaluation/sample_geneval.py evaluation/geneval.yaml

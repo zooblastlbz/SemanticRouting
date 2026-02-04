@@ -1,0 +1,16 @@
+pipeline:
+  model_type: "adafusedit"
+  ckpt_path: ["/path/to/checkpoint"]
+  dtype: "bf16"
+  use_ema: false
+gen:
+  metadata_file: "/path/to/drawbench_meta.json" # obtained via https://github.com/djghosh13/geneval/blob/main/prompts/evaluation_metadata.jsonl
+  batch_size: 16
+  n_samples: 1
+  seed: 42
+  H: 256
+  W: 256
+  scale: 6.0
+  steps: 50
+  negative_prompt: ""
+  instruction: "Describe this image."

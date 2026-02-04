@@ -1,0 +1,21 @@
+compute_environment: LOCAL_MACHINE
+deepspeed_config:
+  deepspeed_hostfile: "<HOSTFILE_PATH>" # path to hostfile
+  #deepspeed_multinode_launcher: MPI  # use pdsh
+  deepspeed_config_file: "./zero2.json"
+distributed_type: DEEPSPEED
+dynamo_config: {}
+fsdp_config: {}
+megatron_lm_config: {}
+machine_rank: 0
+#main_process_ip: '10.252.128.132' # host address
+main_process_port: 0 # port
+main_training_function: main
+num_machines: 8 # number of nodes in GPU cluster
+num_processes: 64  # total GPU count
+rdzv_backend: static
+same_network: true
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+use_cpu: false
