@@ -6,7 +6,7 @@
 
 ### Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers
 
-[![arXiv](https://img.shields.io/badge/arXiv-250x.xxxxx-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-250x.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2602.03510)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/license/apache-2-0)
 [![GitHub stars](https://img.shields.io/github/stars/zooblastlbz/SemanticRouting?style=social)](https://github.com/zooblastlbz/SemanticRouting)
 
@@ -75,7 +75,7 @@ $$ H_{\text{cond}}(t,d) = \sum_{l \in \mathcal{L}} \alpha_{t,d}^{(l)} \cdot \tex
 
 Where the weights $\alpha_{t,d}^{(l)}$ are derived by applying a softmax function to learned logits $z_{t,d}$:
 
-$$ \alpha_{t,d} = \operatorname{Softmax}(z_{t,d}) $$
+$$ \alpha_{t,d} = \mathrm{Softmax}(z_{t,d}) $$
 
 We parameterize $z_{t,d}$ differently for each strategy:
 *   **Time-wise**: $z_{t,d} = g_{\psi}(\phi(t))$ (Time-Conditioned Fusion Gate).
@@ -204,12 +204,14 @@ Generate evaluation samples with Accelerate (for multi-GPU/multi-node) using the
 If you use this code or the *SemanticRouting* paper, please cite:
 
 ```bibtex
-@article{li2026semanticrouting,
-  title   = {Semantic Routing: Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers},
-  author  = {Li, Bozhou and Guan, Yushuo and Li, Haolin and Zeng, Bohan and Ji, Yiyan and Ding, Yue and Wan, Pengfei and Gai, Kun and Zhang, Yuanxing and Zhang, Wentao},
-  journal = {arXiv preprint},
-  year    = {2026},
-  eprint  = {xxxx.xxxxx}
+@misc{li2026semanticroutingexploringmultilayer,
+      title={Semantic Routing: Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers}, 
+      author={Bozhou Li and Yushuo Guan and Haolin Li and Bohan Zeng and Yiyan Ji and Yue Ding and Pengfei Wan and Kun Gai and Yuanxing Zhang and Wentao Zhang},
+      year={2026},
+      eprint={2602.03510},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.03510}, 
 }
 ```
 
