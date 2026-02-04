@@ -6,7 +6,7 @@
 
 ### Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers
 
-[![arXiv](https://img.shields.io/badge/arXiv-250x.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2602.03510)
+[![arXiv](https://img.shields.io/badge/arXiv-2602.03510-b31b1b.svg)](https://arxiv.org/abs/2602.03510)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/license/apache-2-0)
 [![GitHub stars](https://img.shields.io/github/stars/zooblastlbz/SemanticRouting?style=social)](https://github.com/zooblastlbz/SemanticRouting)
 
